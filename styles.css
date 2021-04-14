@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'ballpark';
+    src: url('polices/ballpark.eot'),
+        url('polices/ballpark.svg'),
+        url("polices/ballpark.ttf"),
+        url("polices/ballpark.woff");
+    
+}
+@font-face {
+    font-family: "dayrom";
+    src: url("polices/dayrom.eot"),
+        url("polices/dayrom.svg"),
+        url("polices/dayrom.ttf"),
+        url("polices/dayrom.woff");
+}
+
+body {
+    font-family: "dayrom",Arial, Helvetica, sans-serif;
+}
+
+.principalHeader {
+    display : flex;
+    justify-content : space-between;
+    flex-wrap: wrap;
+}
+.principalHeader div {
+    display : flex;
+    flex-wrap: wrap;
+    /* border : 1px solid black ; */
+    width : 200px;
+    /* width:15%; */
+}
+.principalHeader div img{
+    margin :0 0 20px 0;
+    padding-right : 10px;
+    /* border : 1px solid black ; */
+    width : 80px;
+    /* width : 40%; */
+}
+.principalHeader div h1 {
+    font-family: "ballpark",Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    align-self : flex-end; 
+    margin-bottom : 0px;
+    /* border : 1px solid black ; */
+    width:110px;
+    /* width : 50%; */
+} 
+
+.principalHeader div h2 {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin : 0;
+    /* border : 1px solid black ; */
+    padding : 0;
+    width : 100%;
+}
+
+.principalHeader nav {
+    width : 500px;
+    
+}
+.principalHeader nav ul {
+    list-style-type: None;
+    padding : 0;
+    display : flex;
+}
+ 
+.separator {
+    /* width : 100%; */
+    height : 3px;
+    background-image: url("images/separateur.png") ;
+    background-repeat: repeat ;
+    background-position: center;
+
+}
