@@ -1,3 +1,4 @@
+/* Import des polices de caractères */
 @font-face {
     font-family: 'ballpark';
     src: url('polices/ballpark.eot'),
@@ -13,15 +14,18 @@
         url("polices/dayrom.ttf"),
         url("polices/dayrom.woff");
 }
-
+/* Mise en forme du body */
 body {
     font-family: "dayrom",Arial, Helvetica, sans-serif;
+    /* margin : 30px 50px; */
+    background-image: url("images/fond_jaune.png");
 }
-
+/* Mise en forme de l'header */
 .principalHeader {
     display : flex;
     justify-content : space-between;
     flex-wrap: wrap;
+    margin : 30px 50px 20px 50px;
 }
 .principalHeader div {
     display : flex;
@@ -58,14 +62,26 @@ body {
 
 .principalHeader nav {
     width : 500px;
-    
+    text-transform : uppercase;
+    font-size : 1.5em;
 }
 .principalHeader nav ul {
     list-style-type: None;
     padding : 0;
     display : flex;
+    margin-top: 70px;
 }
- 
+.principalHeader a {
+    color : black;
+    text-decoration :none;
+    margin : 20px;
+    
+} 
+.principalHeader a:hover {
+    color :#892221;
+    text-decoration :underline 0.15em;
+    /* text-decoration-thickness: 0.15em; */
+}
 .separator {
     /* width : 100%; */
     height : 3px;
@@ -73,4 +89,133 @@ body {
     background-repeat: repeat ;
     background-position: center;
 
+}
+
+/* Mise en forme de la section "lien article" */
+.LienNewArticle {
+    background: url("images/sanfrancisco.jpg") no-repeat;
+    background-size:cover;
+    margin : 20px 50px 20px 50px;
+    padding-top : 200px;
+}
+
+.LienNewArticle .BarreBasse  {
+    background-color: rgba(0,0,0,0.7);
+    display : flex;
+    justify-content : space-between;
+    
+    
+}
+
+.LienNewArticle .BarreBasse p {
+    color : white;
+    font-size : 1.1em;
+    margin-left : 10px;
+}
+
+.LienNewArticle .BarreBasse a {
+    color : white;
+    text-decoration : None;
+    background : linear-gradient(white,10%,#7d0e10);
+    border : 1px solid #491214;
+    border-radius: 5px;
+    margin : 5px;
+}
+
+.LienNewArticle .BarreBasse a p {
+    font-size : 1.3em;
+    margin : 10px;
+}
+
+/* Mise en forme de la 3ème ligne - Mise en forme de l'article*/
+
+.ligne3 {
+    margin : 20px 50px;
+    display : flex;
+    align-items: flex-start;
+}
+
+.ligne3 article {
+    width : 70%;
+    margin-right : 5px;
+}
+.ligne3 article header {
+    display: flex;
+}
+
+.ligne3 article header img {
+    width : 55px;
+    height : 55px;
+}
+
+.ligne3 article header h1 {
+    text-transform : uppercase;
+    font-size : 1.5em;
+    margin : 15px;
+}
+.ligne3 article .CorpsArticle {
+    text-align : justify;
+}
+/* Mise en forme de la 3ème ligne - Mise en forme de l'aside*/
+.ligne3 #flechegauche {
+    height : 15px;
+    margin-top : 150px;
+}
+
+.ligne3 aside {
+    width : 29%;
+    background-color : #6f6a63;
+    border-radius : 5px;
+    padding : 10px;
+    color : white;
+    
+}
+
+.ligne3 aside h1 {
+    text-transform : uppercase;
+    font-size : 1.4em;
+    margin : 20px auto;
+    width : 85%;
+}
+
+.ligne3 aside #zozor_classe {
+    width : 50%;
+    margin : auto;
+    
+}
+
+#zozor_classe img{
+    object-fit: contain;
+    width : 100%;
+    height : 100%;
+}
+
+.ligne3 aside p {
+    text-align : justify;
+    font-size : 1.1em;
+}
+
+.ligne3 aside .LogoReseaux {
+    display : flex;
+    justify-content : space-around;
+}
+
+.ligne3 aside .LogoReseaux img {
+    width : 17%;
+}
+
+/* Mise en forme du footer - Mise en forme de la barre de séparation */
+
+.shadow {
+    background : url(images/ombre.png) repeat-x;
+    height : 3px;
+    width : 100%;
+}
+
+.FooterSeparator .ArrowTop {
+    width : 30px;
+    margin : auto;
+    position : relative;
+    top : -6px;
+    z-index: 1;
 }
