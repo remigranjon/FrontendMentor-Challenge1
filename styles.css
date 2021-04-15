@@ -219,3 +219,42 @@ body {
     top : -6px;
     z-index: 1;
 }
+
+/* Mise en forme du footer */
+
+footer {
+    display : flex;
+    margin : 10px 50px;
+    justify-content : space-between;
+}
+
+footer h1 {
+    text-transform :uppercase;
+}
+
+footer .MesPhotos .PhotosVoyage {
+    display :flex;
+    justify-content : space-between;
+    /* width : 100%; */
+}
+
+footer .MesPhotos .PhotosVoyage img {
+    margin : 3px;
+    border : black solid 1px;
+}
+
+footer .MesAmis .MesAmisListes{
+    display : flex;
+    justify-content :space-between;
+}
+
+footer .MesAmis .MesAmisListes ul{
+    /* margin-left : 5px; */
+    /* margin-top: 3px; */
+    margin : 3px 5px;
+    margin-right : 60px;
+    padding-left : 7px;
+    color : #8c2723;
+    list-style-image: url(images/ico_liensexterne.png);
+
+}
