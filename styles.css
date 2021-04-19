@@ -142,6 +142,13 @@ body {
     }
 }
 
+@media screen and (max-width:300px) {
+    .principalHeader {
+        margin : 0;
+
+    }
+}
+
 /* ----------------------------------------------------------- */
 /* Mise en forme de la section "lien article" */
 /* ----------------------------------------------------------- */
@@ -286,6 +293,12 @@ body {
         font-size : 0.8em;
     }
 }
+@media screen and (max-width:300px) {
+    .ligne3 {
+        margin : 10px 0;
+        
+    }
+}
 /* ----------------------------------------------------------- */
 /* Mise en forme du footer - Mise en forme de la barre de séparation */
 /* ----------------------------------------------------------- */
@@ -302,17 +315,30 @@ body {
     top : -6px;
     z-index: 1;
 }
-
+/* ----------------------------------------------------------- */
 /* Mise en forme du footer */
-
+/* ----------------------------------------------------------- */
 footer {
     display : flex;
     margin : 10px 50px;
     justify-content : space-between;
+    flex-wrap: wrap;
 }
 
 footer h1 {
     text-transform :uppercase;
+}
+
+footer .Tweet {
+    width : 325px;
+}
+
+footer .MesPhotos {
+    width : 325px;
+}
+
+footer .MesAmis {
+    width : 325px;
 }
 
 footer .MesPhotos .PhotosVoyage {
@@ -336,7 +362,7 @@ footer .MesAmis .MesAmisListes ul{
     /* margin-top: 3px; */
     margin : 3px 5px;
     margin-right : 60px;
-    padding-left : 7px;
+    padding-left : 15px;
     color : #8c2723;
     list-style-image: url(images/ico_liensexterne.png);
 
