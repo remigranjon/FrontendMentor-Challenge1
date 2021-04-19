@@ -14,13 +14,18 @@
         url("polices/dayrom.ttf"),
         url("polices/dayrom.woff");
 }
+/* ----------------------------------------------------------- */
 /* Mise en forme du body */
+/* ----------------------------------------------------------- */
+
 body {
     font-family: "dayrom",Arial, Helvetica, sans-serif;
     /* margin : 30px 50px; */
     background-image: url("images/fond_jaune.png");
 }
+/* ----------------------------------------------------------- */
 /* Mise en forme de l'header */
+/* ----------------------------------------------------------- */
 .principalHeader {
     display : flex;
     justify-content : space-between;
@@ -30,24 +35,24 @@ body {
 .principalHeader div {
     display : flex;
     flex-wrap: wrap;
-    /* border : 1px solid black ; */
     width : 200px;
     /* width:15%; */
 }
 .principalHeader div img{
     margin :0 0 20px 0;
     padding-right : 10px;
-    /* border : 1px solid black ; */
     width : 80px;
+    height : 80px;
     /* width : 40%; */
 }
 .principalHeader div h1 {
     font-family: "ballpark",Arial, Helvetica, sans-serif;
     font-size: 3em;
-    align-self : flex-end; 
+    /* align-self : flex-end;  */
     margin-bottom : 0px;
     /* border : 1px solid black ; */
     width:110px;
+    margin-top: 50px;
     /* width : 50%; */
 } 
 
@@ -60,12 +65,15 @@ body {
     width : 100%;
 }
 
-.principalHeader nav {
+/* .principalHeader nav {
     width : 500px;
     text-transform : uppercase;
     font-size : 1.5em;
-}
+} */
 .principalHeader nav ul {
+    width : 500px;
+    text-transform : uppercase;
+    font-size : 1.5em;
     list-style-type: None;
     padding : 0;
     display : flex;
@@ -90,11 +98,57 @@ body {
     background-position: center;
 
 }
+/* Media queries */
+@media screen and (max-width:900px) {
+    
+    /* .principalHeader nav {
+        vertical-align: bottom;
+    } */
+    .principalHeader nav ul {
+        flex-direction : column;
+        font-size : 1em;
+        justify-content : space-between;
+        margin-top : 40px;
+        width : auto;
+        margin-bottom: 0;
+        /* position : absolute;
+        bottom : 0px; */
+        /* justify-content: flex-end; */
+    }
+}
 
+@media screen and (max-width:500px) {
+    .principalHeader div {
+        width : 100px;
+    }
+    .principalHeader div img {
+        margin : 0 0 10px 0;
+        padding-right : 5px;
+        width : 40px;
+        height : 40px;
+    }
+    .principalHeader div h1 {
+        width : 55px;
+        font-size : 1.5em;
+        margin-top :25px;
+    }
+    .principalHeader div h2 {
+        font-size : 0.75em;
+    }
+
+    .principalHeader nav ul {
+        font-size : 0.5em ;
+        margin-top : 20px;
+    }
+}
+
+/* ----------------------------------------------------------- */
 /* Mise en forme de la section "lien article" */
+/* ----------------------------------------------------------- */
 .LienNewArticle {
     background: url("images/sanfrancisco.jpg") no-repeat;
-    background-size:cover;
+    /* background-size:cover; */
+    background-size : 100% 100%;
     margin : 20px 50px 20px 50px;
     padding-top : 200px;
 }
@@ -126,9 +180,15 @@ body {
     font-size : 1.3em;
     margin : 10px;
 }
-
+/* Media queries : à 700px on enlève la section*/
+@media screen and (max-width : 700px) {
+    .LienNewArticle {
+        display : none;
+    } 
+}
+/* ----------------------------------------------------------- */
 /* Mise en forme de la 3ème ligne - Mise en forme de l'article*/
-
+/* ----------------------------------------------------------- */
 .ligne3 {
     margin : 20px 50px;
     display : flex;
@@ -156,7 +216,9 @@ body {
 .ligne3 article .CorpsArticle {
     text-align : justify;
 }
+/* ----------------------------------------------------------- */
 /* Mise en forme de la 3ème ligne - Mise en forme de l'aside*/
+/* ----------------------------------------------------------- */
 .ligne3 #flechegauche {
     height : 15px;
     margin-top : 150px;
@@ -203,9 +265,30 @@ body {
 .ligne3 aside .LogoReseaux img {
     width : 17%;
 }
+/* Media queries : à moins de 700px, on enlève l'aside */
+@media screen and (max-width : 700px) {
+    .ligne3 aside {
+        display : none;
+    }
 
+    .ligne3 #flechegauche {
+        display : none;
+    }
+
+    .ligne3 article {
+        width : 100%;
+        margin : 0;
+    }
+    .ligne3 article header h1 {
+        font-size : 1em;
+    }
+    .ligne3 article .CorpsArticle {
+        font-size : 0.8em;
+    }
+}
+/* ----------------------------------------------------------- */
 /* Mise en forme du footer - Mise en forme de la barre de séparation */
-
+/* ----------------------------------------------------------- */
 .shadow {
     background : url(images/ombre.png) repeat-x;
     height : 3px;
